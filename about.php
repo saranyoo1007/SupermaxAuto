@@ -22,10 +22,70 @@ require_once 'includes/header.php';
     <div class="container">
         <div class="about-content">
             <div class="about-image">
-                <div class="about-img-main" style="background: linear-gradient(135deg, var(--dark-light), var(--dark-gray)); padding: 20px;">
-                    <img src="Photo-Logo/Logo.jpg" alt="SuperMax Auto Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 16px;">
+                <div class="about-img-main" style="
+                    background: linear-gradient(145deg, #2D2D2D 0%, #1A1A1A 50%, #2D2D2D 100%);
+                    padding: 30px;
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: 
+                        0 25px 50px rgba(0,0,0,0.5),
+                        0 0 80px rgba(255,107,0,0.15),
+                        inset 0 0 60px rgba(255,107,0,0.05);
+                    border: 2px solid rgba(255,107,0,0.3);
+                ">
+                    <!-- Decorative Corner Elements -->
+                    <div
+                        style="position: absolute; top: 0; left: 0; width: 60px; height: 60px; border-top: 3px solid var(--primary); border-left: 3px solid var(--primary);">
+                    </div>
+                    <div
+                        style="position: absolute; top: 0; right: 0; width: 60px; height: 60px; border-top: 3px solid var(--primary); border-right: 3px solid var(--primary);">
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 60px; height: 60px; border-bottom: 3px solid var(--primary); border-left: 3px solid var(--primary);">
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; right: 0; width: 60px; height: 60px; border-bottom: 3px solid var(--primary); border-right: 3px solid var(--primary);">
+                    </div>
+
+                    <!-- Animated Glow Ring -->
+                    <div style="
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 320px; height: 320px;
+                        border-radius: 50%;
+                        border: 2px solid rgba(255,107,0,0.2);
+                        animation: pulse-ring 3s ease-in-out infinite;
+                    "></div>
+
+                    <!-- Logo Image with Effects -->
+                    <img src="Photo-Logo/Logo.jpg" alt="SuperMax Auto Logo" style="
+                        width: 100%; 
+                        height: 100%; 
+                        object-fit: contain; 
+                        border-radius: 16px;
+                        position: relative;
+                        z-index: 2;
+                        filter: drop-shadow(0 10px 30px rgba(255,107,0,0.3));
+                        transition: all 0.4s ease;
+                    " onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 15px 40px rgba(255,107,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 10px 30px rgba(255,107,0,0.3))'">
+
+                    <!-- Floating Particles -->
+                    <div
+                        style="position: absolute; top: 20%; left: 10%; width: 8px; height: 8px; background: var(--primary); border-radius: 50%; opacity: 0.6; animation: float 4s ease-in-out infinite;">
+                    </div>
+                    <div
+                        style="position: absolute; top: 70%; right: 15%; width: 6px; height: 6px; background: var(--secondary); border-radius: 50%; opacity: 0.5; animation: float 5s ease-in-out infinite 1s;">
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 25%; left: 20%; width: 10px; height: 10px; background: var(--primary); border-radius: 50%; opacity: 0.4; animation: float 3s ease-in-out infinite 0.5s;">
+                    </div>
                 </div>
-                <div class="about-badge">
+                <div class="about-badge" style="
+                    box-shadow: 0 10px 40px rgba(255,107,0,0.5);
+                    animation: float 3s ease-in-out infinite;
+                ">
                     <span class="about-badge-number">10+</span>
                     <span class="about-badge-text">ปีประสบการณ์</span>
                 </div>
