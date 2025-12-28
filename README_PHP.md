@@ -11,6 +11,10 @@
 
 ---
 
+http://192.168.2.3/Supermax_Auto/admin/
+Username: admin
+Password: supermax2023
+
 ## การติดตั้งบน Shared Hosting
 
 ### ขั้นตอนที่ 1: อัพโหลดไฟล์

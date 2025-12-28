@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS admin_users (
 
 -- Insert default admin user (password: supermax2023)
 INSERT INTO admin_users (username, password) VALUES 
-('admin', '$2y$10$VPuYJvqLqZQ8RqRkYlcCDefJHN3Q0uvzuZMp7RZyHQNqL2xElGGdC');
+('admin', '$2y$12$3HpCFSK5ysy.fpJZO8J0heJt/y4qBwFqAeir75bxGkQ5gPTB/Fa6m');
 
 
 -- ===============================

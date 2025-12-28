@@ -6,12 +6,13 @@
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'supermax_auto');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_USER', 'supermax');
+define('DB_PASS', 'supermax123');
 define('DB_CHARSET', 'utf8mb4');
 
 // PDO Connection
-function getConnection() {
+function getConnection()
+{
     try {
         $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
         $options = [
@@ -26,7 +27,8 @@ function getConnection() {
 }
 
 // Helper function to get all rows
-function fetchAll($sql, $params = []) {
+function fetchAll($sql, $params = [])
+{
     $pdo = getConnection();
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
@@ -34,7 +36,8 @@ function fetchAll($sql, $params = []) {
 }
 
 // Helper function to get single row
-function fetchOne($sql, $params = []) {
+function fetchOne($sql, $params = [])
+{
     $pdo = getConnection();
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
@@ -42,7 +45,8 @@ function fetchOne($sql, $params = []) {
 }
 
 // Helper function to insert data
-function insert($sql, $params = []) {
+function insert($sql, $params = [])
+{
     $pdo = getConnection();
     $stmt = $pdo->prepare($sql);
     return $stmt->execute($params);

@@ -9,8 +9,7 @@
     <title><?php echo isset($pageTitle) ? $pageTitle : 'SuperMax Auto'; ?></title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+    <link rel="icon" type="image/jpeg" href="Photo-Logo/Logo.jpg">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,9 +34,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.php" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-car"></i>
-                </div>
+                <img src="Photo-Logo/Logo.jpg" alt="SuperMax Auto Logo" class="logo-img">
                 <div class="logo-text">Super<span>Max</span> Auto</div>
             </a>
 
