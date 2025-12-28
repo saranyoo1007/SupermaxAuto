@@ -22,8 +22,8 @@ require_once 'includes/header.php';
     <div class="container">
         <div class="about-content">
             <div class="about-image">
-                <div class="about-img-main">
-                    <i class="fas fa-car-alt"></i>
+                <div class="about-img-main" style="background: linear-gradient(135deg, var(--dark-light), var(--dark-gray)); padding: 20px;">
+                    <img src="Photo-Logo/Logo.jpg" alt="SuperMax Auto Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 16px;">
                 </div>
                 <div class="about-badge">
                     <span class="about-badge-number">10+</span>
