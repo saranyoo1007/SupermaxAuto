@@ -59,15 +59,18 @@ git push origin main
 
 ```bash
 cd /var/www/html/supermax
+sudo git reset --hard HEAD
 sudo git pull origin main
 sudo chown -R www-data:www-data /var/www/html/supermax
 sudo chmod -R 755 /var/www/html/supermax
 ```
 
-### 🚀 คำสั่งรวม (One-liner)
+### 🚀 คำสั่งรวม (One-liner) - แนะนำ!
 ```bash
-cd /var/www/html/supermax && sudo git pull origin main && sudo chown -R www-data:www-data . && sudo chmod -R 755 .
+cd /var/www/html/supermax && sudo git reset --hard HEAD && sudo git pull origin main && sudo chown -R www-data:www-data . && sudo chmod -R 755 .
 ```
+
+> ⚠️ **หมายเหตุ:** คำสั่ง `git reset --hard HEAD` จะยกเลิกการแก้ไขทั้งหมดบน VPS เพื่อป้องกันปัญหา conflict
 
 ---
 
