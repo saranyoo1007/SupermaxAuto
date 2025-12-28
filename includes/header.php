@@ -1,5 +1,18 @@
+<?php
+// Get current theme from database
+$currentTheme = 'normal';
+try {
+    require_once __DIR__ . '/../config/database.php';
+    $themeSetting = fetchOne("SELECT setting_value FROM settings WHERE setting_key = 'current_theme'");
+    if ($themeSetting) {
+        $currentTheme = $themeSetting['setting_value'];
+    }
+} catch (Exception $e) {
+    // Default to normal theme if database error
+}
+?>
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="<?php echo $currentTheme; ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -22,6 +35,11 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Theme CSS -->
+    <?php if ($currentTheme !== 'normal'): ?>
+        <link rel="stylesheet" href="assets/css/themes/theme-<?php echo $currentTheme; ?>.css">
+    <?php endif; ?>
 </head>
 
 <body>

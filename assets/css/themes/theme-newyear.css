@@ -1,0 +1,224 @@
+/* =====================================================
+   Theme: New Year (ปีใหม่)
+   SuperMax Auto - สีทอง/ม่วง + พลุ + ดาว
+   ===================================================== */
+
+/* Override primary colors */
+:root {
+    --theme-primary: #FFD700;
+    --theme-secondary: #9C27B0;
+    --theme-accent: #E91E63;
+}
+
+/* Hero section overlay */
+.hero::before {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(156, 39, 176, 0.15) 0%, transparent 40%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50' y='50' font-size='20' fill='%23FFD700' opacity='0.1'%3E✦%3C/text%3E%3C/svg%3E") !important;
+}
+
+/* New Year decorations */
+.theme-newyear-decorations {
+    display: block !important;
+}
+
+/* Fireworks animation */
+@keyframes firework {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+.firework {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: firework 2s ease-out infinite;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.firework:nth-child(1) {
+    left: 10%;
+    background: #FFD700;
+    animation-delay: 0s;
+}
+
+.firework:nth-child(2) {
+    left: 30%;
+    background: #E91E63;
+    animation-delay: 0.5s;
+}
+
+.firework:nth-child(3) {
+    left: 50%;
+    background: #9C27B0;
+    animation-delay: 1s;
+}
+
+.firework:nth-child(4) {
+    left: 70%;
+    background: #FFD700;
+    animation-delay: 1.5s;
+}
+
+.firework:nth-child(5) {
+    left: 90%;
+    background: #E91E63;
+    animation-delay: 0.3s;
+}
+
+/* Sparkle stars */
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.star {
+    position: fixed;
+    color: #FFD700;
+    font-size: 20px;
+    animation: twinkle 2s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 9997;
+}
+
+/* Banner */
+.newyear-banner {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #9C27B0 0%, #E91E63 50%, #FFD700 100%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    z-index: 999;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.newyear-banner {
+    background-size: 200% 200%;
+}
+
+/* Confetti */
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    animation: confetti-fall 4s linear infinite;
+    pointer-events: none;
+    z-index: 9996;
+}
+
+.confetti:nth-child(1) {
+    left: 5%;
+    background: #FFD700;
+    animation-delay: 0s;
+}
+
+.confetti:nth-child(2) {
+    left: 15%;
+    background: #E91E63;
+    animation-delay: 0.5s;
+    border-radius: 50%;
+}
+
+.confetti:nth-child(3) {
+    left: 25%;
+    background: #9C27B0;
+    animation-delay: 1s;
+}
+
+.confetti:nth-child(4) {
+    left: 35%;
+    background: #FFD700;
+    animation-delay: 1.5s;
+    border-radius: 50%;
+}
+
+.confetti:nth-child(5) {
+    left: 45%;
+    background: #E91E63;
+    animation-delay: 0.3s;
+}
+
+.confetti:nth-child(6) {
+    left: 55%;
+    background: #9C27B0;
+    animation-delay: 0.8s;
+    border-radius: 50%;
+}
+
+.confetti:nth-child(7) {
+    left: 65%;
+    background: #FFD700;
+    animation-delay: 1.2s;
+}
+
+.confetti:nth-child(8) {
+    left: 75%;
+    background: #E91E63;
+    animation-delay: 0.6s;
+    border-radius: 50%;
+}
+
+.confetti:nth-child(9) {
+    left: 85%;
+    background: #9C27B0;
+    animation-delay: 1.8s;
+}
+
+.confetti:nth-child(10) {
+    left: 95%;
+    background: #FFD700;
+    animation-delay: 0.2s;
+    border-radius: 50%;
+}

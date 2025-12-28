@@ -10,7 +10,7 @@
 
 // turbo
 ```bash
-multipass transfer -r /Users/saranyoo/Ubuntu-server/Supermax_Auto/. protected-croaker:/home/ubuntu/Supermax_Auto/
+multipass transfer -r /Users/saranyoo/Ubuntu-server/Server-Ubutun-server02/Supermax_Auto/. protected-croaker:/home/ubuntu/Supermax_Auto/
 ```
 
 ## ขั้นตอนที่ 2: ตั้งค่า Permission

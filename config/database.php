@@ -52,6 +52,14 @@ function insert($sql, $params = [])
     return $stmt->execute($params);
 }
 
+// Helper function to execute query (UPDATE, DELETE)
+function execute($sql, $params = [])
+{
+    $pdo = getConnection();
+    $stmt = $pdo->prepare($sql);
+    return $stmt->execute($params);
+}
+
 // Site configuration
 define('SITE_NAME', 'SuperMax Auto');
 define('SITE_URL', ''); // ใส่ URL จริงของเว็บไซต์

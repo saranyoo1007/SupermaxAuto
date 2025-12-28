@@ -53,6 +53,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                     </a>
                 </li>
                 <li>
+                    <a href="theme-settings.php"
+                        class="<?php echo $currentPage === 'theme-settings.php' ? 'active' : ''; ?>">
+                        <i class="fas fa-palette"></i> ตั้งค่าธีม
+                    </a>
+                </li>
+                <li>
                     <a href="logout.php">
                         <i class="fas fa-sign-out-alt"></i> ออกจากระบบ
                     </a>

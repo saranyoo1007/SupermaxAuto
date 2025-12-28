@@ -137,3 +137,18 @@ INSERT INTO promotions (title, description, discount_percent, start_date, end_da
 ('เปลี่ยนน้ำมันเครื่อง ฟรี! เช็คสภาพรถ 20 รายการ', 'เปลี่ยนน้ำมันเครื่องกับเรา รับบริการเช็คสภาพรถฟรี 20 รายการ', 0, '2024-01-01', '2025-12-31', 1),
 ('ซื้อยาง 4 เส้น รับส่วนลด 500 บาท', 'ซื้อยางครบ 4 เส้น รับส่วนลดเพิ่มอีก 500 บาท', 0, '2024-01-01', '2025-12-31', 1),
 ('แบตเตอรี่ลดพิเศษ 20%', 'โปรโมชั่นแบตเตอรี่ลดราคาพิเศษ 20% ทุกยี่ห้อ', 20, '2024-01-01', '2025-12-31', 1);
+
+-- ===============================
+-- Settings Table (for Theme)
+-- ===============================
+CREATE TABLE IF NOT EXISTS settings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    setting_key VARCHAR(50) NOT NULL UNIQUE,
+    setting_value VARCHAR(255),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+-- Insert default theme
+INSERT INTO settings (setting_key, setting_value) VALUES 
+('current_theme', 'normal')
+ON DUPLICATE KEY UPDATE setting_value = setting_value;

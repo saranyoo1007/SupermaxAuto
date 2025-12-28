@@ -1,0 +1,179 @@
+/* =====================================================
+   Theme: Chinese New Year (ตรุษจีน)
+   SuperMax Auto - สีแดง/ทอง + โคมจีน
+   ===================================================== */
+
+/* Override primary colors */
+:root {
+    --theme-primary: #DC143C;
+    --theme-secondary: #FFD700;
+    --theme-accent: #8B0000;
+}
+
+/* Hero section overlay */
+.hero::before {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(220, 20, 60, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.15) 0%, transparent 40%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ctext x='30' y='30' font-size='25' fill='%23FFD700' opacity='0.15'%3E福%3C/text%3E%3C/svg%3E") !important;
+}
+
+/* Chinese New Year decorations */
+.theme-chinese-decorations {
+    display: block !important;
+}
+
+/* Banner */
+.chinese-banner {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #DC143C 0%, #8B0000 50%, #DC143C 100%);
+    color: #FFD700;
+    text-align: center;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 999;
+    border-bottom: 3px solid #FFD700;
+}
+
+/* Hanging lanterns */
+@keyframes lantern-swing {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.lantern {
+    position: fixed;
+    top: -20px;
+    width: 50px;
+    height: 70px;
+    animation: lantern-swing 3s ease-in-out infinite;
+    transform-origin: top center;
+    z-index: 998;
+    pointer-events: none;
+}
+
+.lantern::before {
+    content: '🏮';
+    font-size: 50px;
+}
+
+.lantern:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.lantern:nth-child(2) {
+    left: 20%;
+    animation-delay: 0.5s;
+}
+
+.lantern:nth-child(3) {
+    right: 20%;
+    animation-delay: 0.3s;
+}
+
+.lantern:nth-child(4) {
+    right: 5%;
+    animation-delay: 0.8s;
+}
+
+/* Gold coins falling */
+@keyframes coin-fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.gold-coin {
+    position: fixed;
+    font-size: 25px;
+    top: -50px;
+    animation: coin-fall 5s linear infinite;
+    pointer-events: none;
+    z-index: 997;
+}
+
+.gold-coin::before {
+    content: '🧧';
+}
+
+.gold-coin:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.gold-coin:nth-child(2) {
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.gold-coin:nth-child(3) {
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.gold-coin:nth-child(4) {
+    left: 55%;
+    animation-delay: 1.5s;
+}
+
+.gold-coin:nth-child(5) {
+    left: 70%;
+    animation-delay: 0.5s;
+}
+
+.gold-coin:nth-child(6) {
+    left: 85%;
+    animation-delay: 2.5s;
+}
+
+/* Dragon pattern border */
+.hero {
+    border-bottom: 5px solid;
+    border-image: repeating-linear-gradient(90deg, #FFD700, #DC143C 20px, #FFD700 40px) 1;
+}
+
+/* Lucky text */
+.lucky-text {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: #DC143C;
+    color: #FFD700;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 3px solid #FFD700;
+    z-index: 999;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}

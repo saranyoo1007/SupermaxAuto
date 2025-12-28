@@ -1,0 +1,237 @@
+/* =====================================================
+   Theme: Songkran (สงกรานต์)
+   SuperMax Auto - สีฟ้า/ชมพู + หยดน้ำ
+   ===================================================== */
+
+/* Override primary colors */
+:root {
+    --theme-primary: #00BCD4;
+    --theme-secondary: #E91E63;
+    --theme-accent: #9C27B0;
+}
+
+/* Hero section overlay */
+.hero::before {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(0, 188, 212, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(233, 30, 99, 0.15) 0%, transparent 40%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='8' fill='%2300BCD4' opacity='0.1'/%3E%3C/svg%3E") !important;
+}
+
+/* Songkran decorations */
+.theme-songkran-decorations {
+    display: block !important;
+}
+
+/* Banner */
+.songkran-banner {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #00BCD4 0%, #E91E63 50%, #9C27B0 100%);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 999;
+}
+
+/* Water drops falling */
+@keyframes water-drop {
+    0% {
+        transform: translateY(-20px) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+.water-drop {
+    position: fixed;
+    font-size: 25px;
+    top: -30px;
+    animation: water-drop 3s linear infinite;
+    pointer-events: none;
+    z-index: 997;
+}
+
+.water-drop::before {
+    content: '💧';
+}
+
+.water-drop:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.water-drop:nth-child(2) {
+    left: 15%;
+    animation-delay: 0.3s;
+}
+
+.water-drop:nth-child(3) {
+    left: 25%;
+    animation-delay: 0.6s;
+}
+
+.water-drop:nth-child(4) {
+    left: 35%;
+    animation-delay: 0.9s;
+}
+
+.water-drop:nth-child(5) {
+    left: 45%;
+    animation-delay: 1.2s;
+}
+
+.water-drop:nth-child(6) {
+    left: 55%;
+    animation-delay: 0.2s;
+}
+
+.water-drop:nth-child(7) {
+    left: 65%;
+    animation-delay: 0.5s;
+}
+
+.water-drop:nth-child(8) {
+    left: 75%;
+    animation-delay: 0.8s;
+}
+
+.water-drop:nth-child(9) {
+    left: 85%;
+    animation-delay: 1.1s;
+}
+
+.water-drop:nth-child(10) {
+    left: 95%;
+    animation-delay: 0.4s;
+}
+
+/* Splash effect */
+@keyframes splash {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.splash {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #00BCD4;
+    animation: splash 2s ease-out infinite;
+    pointer-events: none;
+    z-index: 996;
+}
+
+.splash:nth-child(1) {
+    left: 20%;
+    top: 40%;
+    animation-delay: 0s;
+}
+
+.splash:nth-child(2) {
+    left: 60%;
+    top: 30%;
+    animation-delay: 0.5s;
+}
+
+.splash:nth-child(3) {
+    left: 80%;
+    top: 60%;
+    animation-delay: 1s;
+}
+
+/* Floating flowers */
+@keyframes flower-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+.thai-flower {
+    position: fixed;
+    font-size: 30px;
+    animation: flower-float 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 998;
+}
+
+.thai-flower::before {
+    content: '🌸';
+}
+
+.thai-flower:nth-child(1) {
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.thai-flower:nth-child(2) {
+    right: 10%;
+    top: 30%;
+    animation-delay: 1s;
+}
+
+.thai-flower:nth-child(3) {
+    left: 5%;
+    bottom: 30%;
+    animation-delay: 0.5s;
+}
+
+.thai-flower:nth-child(4) {
+    right: 5%;
+    bottom: 20%;
+    animation-delay: 1.5s;
+}
+
+/* Water gun badge */
+.water-gun-badge {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: linear-gradient(135deg, #00BCD4, #E91E63);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 999;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}

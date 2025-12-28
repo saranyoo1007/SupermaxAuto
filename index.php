@@ -16,6 +16,84 @@ $promotions = fetchAll("SELECT * FROM promotions WHERE is_active = 1 LIMIT 3");
 require_once 'includes/header.php';
 ?>
 
+<!-- Theme Decorations -->
+<?php if (isset($currentTheme) && $currentTheme === 'newyear'): ?>
+    <!-- New Year Decorations -->
+    <div class="newyear-banner">🎆 สวัสดีปีใหม่! Happy New Year 2025 🎇</div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+<?php endif; ?>
+
+<?php if (isset($currentTheme) && $currentTheme === 'chinese'): ?>
+    <!-- Chinese New Year Decorations -->
+    <div class="chinese-banner">🏮 恭喜发财 สวัสดีปีใหม่จีน 新年快乐 🧧</div>
+    <div class="lantern"></div>
+    <div class="lantern"></div>
+    <div class="lantern"></div>
+    <div class="lantern"></div>
+    <div class="gold-coin"></div>
+    <div class="gold-coin"></div>
+    <div class="gold-coin"></div>
+    <div class="gold-coin"></div>
+    <div class="gold-coin"></div>
+    <div class="gold-coin"></div>
+    <div class="lucky-text">🧧 อั่งเปา สุขสันต์วันตรุษจีน!</div>
+<?php endif; ?>
+
+<?php if (isset($currentTheme) && $currentTheme === 'songkran'): ?>
+    <!-- Songkran Decorations -->
+    <div class="songkran-banner">💧 สุขสันต์วันสงกรานต์ Happy Songkran! 🌸</div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="water-drop"></div>
+    <div class="splash"></div>
+    <div class="splash"></div>
+    <div class="splash"></div>
+    <div class="thai-flower"></div>
+    <div class="thai-flower"></div>
+    <div class="thai-flower"></div>
+    <div class="thai-flower"></div>
+    <div class="water-gun-badge">🔫 สาดน้ำกันเถอะ!</div>
+<?php endif; ?>
+
+<?php if (isset($currentTheme) && $currentTheme === 'christmas'): ?>
+    <!-- Christmas Decorations -->
+    <div class="christmas-banner">🎄 Merry Christmas! สุขสันต์วันคริสต์มาส 🎅</div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="christmas-tree left"></div>
+    <div class="christmas-tree right"></div>
+    <div class="gift-badge"></div>
+<?php endif; ?>
+
 <!-- Hero Section -->
 <section class="hero">
     <div class="container">

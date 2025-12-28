@@ -1,0 +1,9 @@
+/* =====================================================
+   Theme: Normal (Default)
+   SuperMax Auto - สีส้ม/ดำ ปกติ
+   ===================================================== */
+
+/* ไม่มี decoration พิเศษ - ใช้ styles.css ปกติ */
+.theme-decoration {
+    display: none !important;
+}
