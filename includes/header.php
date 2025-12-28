@@ -58,9 +58,9 @@
                         class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">ติดต่อเรา</a>
                 </li>
                 <li class="nav-cta">
-                    <a href="tel:021234567" class="btn btn-primary">
+                    <a href="tel:0849027778" class="btn btn-primary">
                         <i class="fas fa-phone"></i>
-                        โทร 02-123-4567
+                        โทร 084-902-7778
                     </a>
                 </li>
             </ul>

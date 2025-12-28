@@ -43,11 +43,13 @@
             <div class="footer-column">
                 <h4>ติดต่อเรา</h4>
                 <ul class="footer-links">
-                    <li><i class="fas fa-map-marker-alt"></i> 123 ถ.สุขุมวิท กรุงเทพฯ</li>
-                    <li><i class="fas fa-phone"></i> 02-123-4567</li>
-                    <li><i class="fas fa-mobile-alt"></i> 089-123-4567</li>
-                    <li><i class="fas fa-envelope"></i> info@supermaxauto.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> บางบัวทอง นนทบุรี</li>
+                    <li><i class="fas fa-gas-pump"></i> ในปั๊มบางจาก ตรงข้ามบ้านเอื้ออาทร</li>
+                    <li><a href="tel:0849027778" style="color: var(--primary);"><i class="fas fa-phone"></i>
+                            084-902-7778 (ช่างบอย)</a></li>
                     <li><i class="fas fa-clock"></i> 08:00 - 20:00 น.</li>
+                    <li><a href="https://maps.app.goo.gl/hKZS1CEd4zRHznUN7" target="_blank"
+                            style="color: var(--primary);"><i class="fas fa-map-marked-alt"></i> Google Maps</a></li>
                 </ul>
             </div>
         </div>

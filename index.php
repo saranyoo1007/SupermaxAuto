@@ -25,16 +25,16 @@ require_once 'includes/header.php';
                     บริการรถยนต์ครบวงจร
                     <span>SuperMax Auto</span>
                 </h1>
-                <p>บริการเปลี่ยนยางรถยนต์ น้ำมันเครื่อง ตั้งศูนย์ล้อ และอื่นๆ ด้วยทีมช่างมืออาชีพ อุปกรณ์ทันสมัย รวดเร็ว
-                    ราคายุติธรรม</p>
+                <p>🔩 ล้อ ยาง แบตเตอรี่ ช่วงล่าง เบรค | 📍 บางบัวทอง นนทบุรี ในปั๊มบางจาก ตรงข้ามบ้านเอื้ออาทร |
+                    ทุกอย่างได้มาตรฐาน มีของให้เลือกมากมาย</p>
                 <div class="hero-buttons">
-                    <a href="services.php" class="btn btn-primary">
-                        <i class="fas fa-wrench"></i>
-                        ดูบริการ
-                    </a>
-                    <a href="contact.php" class="btn btn-outline">
+                    <a href="tel:0849027778" class="btn btn-primary">
                         <i class="fas fa-phone"></i>
-                        ติดต่อเรา
+                        โทร 084-902-7778
+                    </a>
+                    <a href="https://maps.app.goo.gl/hKZS1CEd4zRHznUN7" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-map-marker-alt"></i>
+                        ดูแผนที่
                     </a>
                 </div>
             </div>
@@ -237,19 +237,46 @@ require_once 'includes/header.php';
     </div>
 </section>
 
+<!-- Special Promo Section -->
+<section class="section" style="background: var(--dark-light);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">🔥 โปรโมชั่นพิเศษ</span>
+            <h2 class="section-title">ราคาสุดคุ้ม!</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+            <div
+                style="background: linear-gradient(135deg, #FF6B00, #FF8533); padding: 30px; border-radius: 16px; text-align: center;">
+                <div style="font-size: 3rem; font-weight: 800; margin-bottom: 10px;">฿799</div>
+                <h3 style="margin-bottom: 10px;">ถ่ายน้ำมันเครื่อง</h3>
+                <p style="opacity: 0.9;">เครื่องเบนซิน ฟรีกรอง!</p>
+            </div>
+            <div
+                style="background: linear-gradient(135deg, #FFB800, #FFC107); padding: 30px; border-radius: 16px; text-align: center; color: #1A1A1A;">
+                <div style="font-size: 3rem; font-weight: 800; margin-bottom: 10px;">฿999</div>
+                <h3 style="margin-bottom: 10px;">ถ่ายน้ำมันเครื่อง</h3>
+                <p style="opacity: 0.9;">เครื่องเบนซิน และดีเซล ฟรีกรอง!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- CTA Section -->
 <section class="section" style="background: var(--gradient-primary); text-align: center;">
     <div class="container">
-        <h2 style="margin-bottom: 16px;">พร้อมให้บริการคุณแล้ววันนี้!</h2>
-        <p style="opacity: 0.9; margin-bottom: 30px;">โทรนัดหมายหรือเข้ามาใช้บริการได้ทันที ไม่ต้องจองล่วงหน้า</p>
+        <h2 style="margin-bottom: 16px;">🙏 ยินดีให้บริการค่ะ</h2>
+        <p style="opacity: 0.9; margin-bottom: 10px; font-size: 1.2rem;">📍 Super Max Auto บางบัวทอง นนทบุรี</p>
+        <p style="opacity: 0.9; margin-bottom: 30px;">ในปั๊มบางจาก ตรงข้ามบ้านเอื้ออาทร | ฝากบอกต่อกันด้วยนะคะ
+            ขอบคุณลูกค้าที่ช่วยอุดหนุนค่ะ 😊</p>
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-            <a href="tel:021234567" class="btn btn-white">
+            <a href="tel:0849027778" class="btn btn-white">
                 <i class="fas fa-phone"></i>
-                โทร 02-123-4567
+                โทรหาช่างบอย 084-902-7778
             </a>
-            <a href="contact.php" class="btn" style="background: rgba(0,0,0,0.3); color: white;">
+            <a href="https://maps.app.goo.gl/hKZS1CEd4zRHznUN7" target="_blank" class="btn"
+                style="background: rgba(0,0,0,0.3); color: white;">
                 <i class="fas fa-map-marker-alt"></i>
-                ดูแผนที่
+                เปิด Google Maps
             </a>
         </div>
     </div>

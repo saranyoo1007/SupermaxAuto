@@ -62,7 +62,7 @@ require_once 'includes/header.php';
                         </div>
                         <div>
                             <h4>ที่อยู่</h4>
-                            <p>123 ถนนสุขุมวิท แขวงคลองเตย<br>เขตคลองเตย กรุงเทพฯ 10110</p>
+                            <p>ในปั๊มบางจาก ตรงข้ามบ้านเอื้ออาทร<br>บางบัวทอง นนทบุรี</p>
                         </div>
                     </div>
 
@@ -71,8 +71,8 @@ require_once 'includes/header.php';
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
-                            <h4>โทรศัพท์</h4>
-                            <p>02-123-4567, 089-123-4567</p>
+                            <h4>โทรศัพท์ (ช่างบอย)</h4>
+                            <p><a href="tel:0849027778" style="color: var(--primary);">084-902-7778</a></p>
                         </div>
                     </div>
 
@@ -150,12 +150,23 @@ require_once 'includes/header.php';
 <!-- Map Section -->
 <section class="section" style="padding-top: 0;">
     <div class="container">
+        <div class="section-header" style="margin-bottom: 30px;">
+            <span class="section-subtitle">📍 แผนที่ร้าน</span>
+            <h2 class="section-title">Super Max Auto บางบัวทอง</h2>
+            <p class="section-desc">ในปั๊มบางจาก ตรงข้ามบ้านเอื้ออาทร บางบัวทอง นนทบุรี</p>
+        </div>
         <div
-            style="background: var(--dark-light); border-radius: var(--border-radius-lg); overflow: hidden; height: 400px;">
+            style="background: var(--dark-light); border-radius: var(--border-radius-lg); overflow: hidden; height: 450px; border: 2px solid var(--primary);">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5685477953836!2d100.5588!3d13.7563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ1JzIyLjciTiAxMDDCsDMzJzMxLjciRQ!5e0!3m2!1sth!2sth!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.8!2d100.4!3d13.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ1JzIyLjciTiAxMDDCsDMzJzMxLjciRQ!5e0!3m2!1sth!2sth!4v1234567890"
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://maps.app.goo.gl/hKZS1CEd4zRHznUN7" target="_blank" class="btn btn-primary">
+                <i class="fas fa-map-marked-alt"></i>
+                เปิดใน Google Maps
+            </a>
         </div>
     </div>
 </section>
