@@ -19,7 +19,11 @@ require_once 'includes/header.php';
 <!-- Theme Decorations -->
 <?php if (isset($currentTheme) && $currentTheme === 'newyear'): ?>
     <!-- New Year Decorations -->
-    <div class="newyear-banner">🎆 สวัสดีปีใหม่! Happy New Year <?php echo date('Y'); ?> 🎇</div>
+    <?php
+    // หลัง 25 ธันวาคม แสดงปีถัดไป
+    $newYear = (date('m') == 12 && date('d') >= 25) ? (date('Y') + 1) : date('Y');
+    ?>
+    <div class="newyear-banner">🎆 สวัสดีปีใหม่! Happy New Year <?php echo $newYear; ?> 🎇</div>
     <div class="firework"></div>
     <div class="firework"></div>
     <div class="firework"></div>
