@@ -11,7 +11,8 @@
                 </a>
                 <p>บริการเปลี่ยนยางรถยนต์ น้ำมันเครื่อง ตั้งศูนย์ล้อ ครบวงจร ด้วยทีมช่างมืออาชีพและอุปกรณ์ทันสมัย</p>
                 <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://web.facebook.com/Supermaxrayong" target="_blank" class="social-link"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-line"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>

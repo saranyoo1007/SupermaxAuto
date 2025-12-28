@@ -98,7 +98,8 @@ require_once 'includes/header.php';
                 </div>
 
                 <div class="footer-social" style="justify-content: flex-start;">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://web.facebook.com/Supermaxrayong" target="_blank" class="social-link"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-line"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                 </div>
