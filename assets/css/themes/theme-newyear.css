@@ -1,33 +1,79 @@
 /* =====================================================
    Theme: New Year (ปีใหม่)
-   SuperMax Auto - สีทอง/ม่วง + พลุ + ดาว
+   SuperMax Auto - สีทอง/ม่วง + พลุ + ดาว + แสงสี
    ===================================================== */
 
-/* Override primary colors */
+/* Override primary colors with gradients */
 :root {
     --theme-primary: #FFD700;
     --theme-secondary: #9C27B0;
     --theme-accent: #E91E63;
+    --theme-glow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
-/* Hero section overlay */
+/* Hero section overlay with animated gradient */
 .hero::before {
     background:
         radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.2) 0%, transparent 40%),
-        radial-gradient(circle at 80% 20%, rgba(156, 39, 176, 0.15) 0%, transparent 40%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50' y='50' font-size='20' fill='%23FFD700' opacity='0.1'%3E✦%3C/text%3E%3C/svg%3E") !important;
+        radial-gradient(circle at 80% 20%, rgba(156, 39, 176, 0.2) 0%, transparent 40%),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50' y='50' font-size='24' fill='%23FFD700' opacity='0.05'%3E2025%3C/text%3E%3C/svg%3E") !important;
+    animation: hero-pulse 5s infinite alternate;
 }
 
-/* New Year decorations */
-.theme-newyear-decorations {
-    display: block !important;
-}
-
-/* Fireworks animation */
-@keyframes firework {
+@keyframes hero-pulse {
     0% {
-        transform: translateY(100vh) scale(0);
+        opacity: 0.8;
+    }
+
+    100% {
         opacity: 1;
+    }
+}
+
+/* Banner Styling */
+.newyear-banner {
+    position: fixed;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    text-align: center;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    z-index: 1000;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(156, 39, 176, 0.2);
+    backdrop-filter: blur(10px);
+    animation: banner-glow 2s ease-in-out infinite;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes banner-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(156, 39, 176, 0.2);
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.6), inset 0 0 20px rgba(156, 39, 176, 0.4);
+        transform: translateX(-50%) scale(1.02);
+    }
+}
+
+/* Enhanced Fireworks */
+@keyframes firework-explode {
+    0% {
+        transform: scale(0);
+        opacity: 0;
     }
 
     50% {
@@ -35,190 +81,174 @@
     }
 
     100% {
-        transform: translateY(-100vh) scale(1);
+        transform: scale(1.5);
         opacity: 0;
     }
 }
 
 .firework {
     position: fixed;
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    animation: firework 2s ease-out infinite;
+    box-shadow:
+        0 0 0 4px #FFD700,
+        0 0 0 8px #FFD700,
+        0 0 0 12px rgba(255, 215, 0, 0.5),
+        -20px -30px 0 2px #E91E63,
+        20px -30px 0 2px #9C27B0,
+        -20px 30px 0 2px #00BCD4,
+        20px 30px 0 2px #4CAF50;
+    animation: firework-shoot 3s ease-out infinite;
     pointer-events: none;
     z-index: 9998;
+    opacity: 0;
 }
 
-.firework:nth-child(1) {
-    left: 10%;
-    background: #FFD700;
-    animation-delay: 0s;
-}
-
-.firework:nth-child(2) {
-    left: 30%;
-    background: #E91E63;
-    animation-delay: 0.5s;
-}
-
-.firework:nth-child(3) {
-    left: 50%;
-    background: #9C27B0;
-    animation-delay: 1s;
-}
-
-.firework:nth-child(4) {
-    left: 70%;
-    background: #FFD700;
-    animation-delay: 1.5s;
-}
-
-.firework:nth-child(5) {
-    left: 90%;
-    background: #E91E63;
-    animation-delay: 0.3s;
-}
-
-/* Sparkle stars */
-@keyframes twinkle {
-
-    0%,
-    100% {
-        opacity: 0.3;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-}
-
-.star {
-    position: fixed;
-    color: #FFD700;
-    font-size: 20px;
-    animation: twinkle 2s ease-in-out infinite;
-    pointer-events: none;
-    z-index: 9997;
-}
-
-/* Banner */
-.newyear-banner {
-    position: fixed;
-    top: 85px;
-    left: 0;
-    right: 0;
-    background: linear-gradient(135deg, #9C27B0 0%, #E91E63 50%, #FFD700 100%);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-weight: 600;
-    z-index: 999;
-    animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-
-    0%,
-    100% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-}
-
-.newyear-banner {
-    background-size: 200% 200%;
-}
-
-/* Confetti */
-@keyframes confetti-fall {
+@keyframes firework-shoot {
     0% {
-        transform: translateY(-100px) rotate(0deg);
+        transform: translateY(100vh) scale(0.5);
         opacity: 1;
     }
 
+    50% {
+        transform: translateY(20vh) scale(1);
+        opacity: 1;
+        box-shadow: 0 0 0 10px #FFD700, 0 0 20px 20px rgba(255, 215, 0, 0.5);
+    }
+
+    70% {
+        transform: translateY(20vh) scale(2);
+        opacity: 0.8;
+    }
+
     100% {
-        transform: translateY(100vh) rotate(720deg);
+        transform: translateY(20vh) scale(2.5);
         opacity: 0;
     }
 }
 
+.firework:nth-child(1) {
+    left: 15%;
+    animation-delay: 0s;
+    --color: #FFD700;
+}
+
+.firework:nth-child(2) {
+    left: 85%;
+    animation-delay: 1.5s;
+    --color: #E91E63;
+}
+
+.firework:nth-child(3) {
+    left: 50%;
+    animation-delay: 0.8s;
+    --color: #00BCD4;
+}
+
+.firework:nth-child(4) {
+    left: 30%;
+    animation-delay: 2.2s;
+    --color: #9C27B0;
+}
+
+.firework:nth-child(5) {
+    left: 70%;
+    animation-delay: 2.8s;
+    --color: #4CAF50;
+}
+
+/* Enhanced Confetti (More shapes) */
 .confetti {
     position: fixed;
+    top: -20px;
     width: 10px;
     height: 10px;
-    top: -10px;
-    animation: confetti-fall 4s linear infinite;
+    background: var(--theme-primary);
+    animation: confetti-fall 5s linear infinite;
     pointer-events: none;
     z-index: 9996;
 }
 
+.confetti:nth-of-type(2n) {
+    border-radius: 50%;
+    background: var(--theme-secondary);
+}
+
+.confetti:nth-of-type(3n) {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: var(--theme-accent);
+}
+
 .confetti:nth-child(1) {
-    left: 5%;
-    background: #FFD700;
+    left: 10%;
+    animation-duration: 4s;
     animation-delay: 0s;
 }
 
 .confetti:nth-child(2) {
-    left: 15%;
-    background: #E91E63;
-    animation-delay: 0.5s;
-    border-radius: 50%;
-}
-
-.confetti:nth-child(3) {
-    left: 25%;
-    background: #9C27B0;
+    left: 20%;
+    animation-duration: 5s;
     animation-delay: 1s;
 }
 
+.confetti:nth-child(3) {
+    left: 30%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
 .confetti:nth-child(4) {
-    left: 35%;
-    background: #FFD700;
-    animation-delay: 1.5s;
-    border-radius: 50%;
+    left: 40%;
+    animation-duration: 6s;
+    animation-delay: 0.5s;
 }
 
 .confetti:nth-child(5) {
-    left: 45%;
-    background: #E91E63;
-    animation-delay: 0.3s;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 3s;
 }
 
 .confetti:nth-child(6) {
-    left: 55%;
-    background: #9C27B0;
-    animation-delay: 0.8s;
-    border-radius: 50%;
+    left: 60%;
+    animation-duration: 5s;
+    animation-delay: 1.5s;
 }
 
 .confetti:nth-child(7) {
-    left: 65%;
-    background: #FFD700;
-    animation-delay: 1.2s;
+    left: 70%;
+    animation-duration: 3.5s;
+    animation-delay: 2.5s;
 }
 
 .confetti:nth-child(8) {
-    left: 75%;
-    background: #E91E63;
-    animation-delay: 0.6s;
-    border-radius: 50%;
+    left: 80%;
+    animation-duration: 4.5s;
+    animation-delay: 0.2s;
 }
 
 .confetti:nth-child(9) {
-    left: 85%;
-    background: #9C27B0;
-    animation-delay: 1.8s;
+    left: 90%;
+    animation-duration: 5.5s;
+    animation-delay: 1.2s;
 }
 
-.confetti:nth-child(10) {
-    left: 95%;
-    background: #FFD700;
-    animation-delay: 0.2s;
-    border-radius: 50%;
+/* Glowing Text Effect for existing elements */
+.hero-text h1 span {
+    color: #FFD700 !important;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #FFD700, #FFA000) !important;
+    border-color: #FFD700 !important;
+    color: #000 !important;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4) !important;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6) !important;
+    transform: translateY(-3px);
 }
